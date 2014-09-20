@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BMI Calculator</title>
+  <meta charset="utf-8">
+  <meta name="description" content="BMI Calculator">
+  <meta name="author" content="Christoph Schwerdtfeger">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="C:/Users/Christoph/Documents/R/win-library/3.1/slidifyLibraries/libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="C:/Users/Christoph/Documents/R/win-library/3.1/slidifyLibraries/libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="C:/Users/Christoph/Documents/R/win-library/3.1/slidifyLibraries/libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="C:/Users/Christoph/Documents/R/win-library/3.1/slidifyLibraries/libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="C:/Users/Christoph/Documents/R/win-library/3.1/slidifyLibraries/libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="C:/Users/Christoph/Documents/R/win-library/3.1/slidifyLibraries/libraries/frameworks/io2012/js/slides" 
+    src="C:/Users/Christoph/Documents/R/win-library/3.1/slidifyLibraries/libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>BMI Calculator</h1>
+    <h2>An easy to use calculator for BMI</h2>
+    <p>Christoph Schwerdtfeger<br/>Student</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Motivation</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>Disclaimer: This has been prepared for educational purposes and is not meant to be used when examining health problems.</p></li>
+<li><p>Obesity and overweight are a growing health problem, especially in the developed world.</p></li>
+<li><p>BMI is an easy to use indicator to assess an adults&#39; weight relative to their size.</p></li>
+<li><p>However, the math is not easy enough to be done in your head, especially if you are not used to the metric system or forgot the binomic formulas...</p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>What is BMI?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>BMI is the abbreviation for Body Mass Index</li>
+<li>It is calculated by dividing a person&#39;s weight by their squared height</li>
+<li>Example: A person weighs 78 kgs and is 1.78 meters tall:</li>
+</ul>
+
+<pre><code class="r">BMI &lt;- 78 / (1.78*1.78)
+BMI
+</code></pre>
+
+<pre><code>## [1] 24.62
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Why do I need an online calculator?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>I forgot to mention: the weight and height have to be reported in the metric system, using meters and kilograms.</li>
+<li>Most people would not even know how to convert feet and inches to meters.</li>
+<li>Or pounds to kilograms.</li>
+<li>The BMI Calculator lets you chose between the metric system and the traditional U.S. measures.</li>
+<li>To my knowledge, all other major non-metric systems (notably the Russian and the Chinese system) have been abandoned in favor of the metric system.</li>
+<li>So the BMI Calculator should be able to serve most of the world.</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>How do I interpret results?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>The World Health Organization considers a person overweight, if their BMI is 25 or above, and obese if it is 30 or above.</li>
+</ul>
+
+<pre><code class="r">if (BMI&gt;=30) {
+        WHO &lt;- &quot;The person is considered obese&quot;
+} else if (BMI&gt;=25) {
+        WHO &lt;- &quot;The person is considered overweight&quot;
+} else {
+        WHO &lt;- &quot;The person is considered of normal weight&quot;
+}
+
+WHO
+</code></pre>
+
+<pre><code>## [1] &quot;The person is considered of normal weight&quot;
+</code></pre>
+
+<ul>
+<li>For further information please refer to <a href="http://www.cdc.gov/obesity/adult/defining.html">http://www.cdc.gov/obesity/adult/defining.html</a></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Motivation'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='What is BMI?'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Why do I need an online calculator?'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='How do I interpret results?'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="C:/Users/Christoph/Documents/R/win-library/3.1/slidifyLibraries/libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
